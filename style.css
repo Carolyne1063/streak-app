@@ -103,7 +103,8 @@ button:hover {
 }
 
 .habit-card ion-icon {
-    font-size: 30px; 
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 .habit-card p {

@@ -37,7 +37,7 @@ function addHabitToList(habit) {
     const habitCard = document.createElement('div');
     habitCard.classList.add('habit-card');
     const habitIcon = document.createElement('ion-icon');
-    habitIcon.setAttribute('name', 'water-outline');
+    habitIcon.setAttribute('name', 'sunny-outline');
     function createParagraphWithText(text) {
         const paragraph = document.createElement('p');
         paragraph.textContent = text;
@@ -57,6 +57,7 @@ function addHabitToList(habit) {
     const timeDiff = currentDate.getTime() - startDate.getTime();
     const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
     const streak = createParagraphWithText(`Streak: ${dayDiff} days`);
+    habitCard.appendChild(habitIcon);
     appendParagraphToElement(habitText, habitCard);
     appendParagraphToElement(descriptionText, habitCard);
     appendParagraphToElement(frequencyText, habitCard);
