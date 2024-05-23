@@ -1,7 +1,7 @@
 {
   "habits": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Drink Water",
       "description": "Drink 8 glasses of water daily.",
       "frequency": "daily",
@@ -10,7 +10,7 @@
       "endDate": null
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Exercise",
       "description": "Exercise for at least 30 minutes.",
       "frequency": "daily",
@@ -19,7 +19,7 @@
       "endDate": null
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Read",
       "description": "Read for 20 minutes.",
       "frequency": "daily",
@@ -28,7 +28,7 @@
       "endDate": null
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sleep",
       "description": "Sleep for 8 hours",
       "frequency": "daily",
@@ -37,7 +37,7 @@
       "endDate": null
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pray",
       "description": "Pray for 30 minutes",
       "frequency": "daily",
@@ -52,6 +52,30 @@
       "frequency": "l",
       "targetGoal": "carol",
       "startDate": "2024-05-31"
+    },
+    {
+      "id": "cbdd",
+      "habitName": "DRINK WATER",
+      "description": "Drink 8 glasses of water every day",
+      "frequency": "Daily",
+      "targetGoal": "8 Glasses",
+      "startDate": "2024-05-23"
+    },
+    {
+      "id": "4c1d",
+      "habitName": "gh",
+      "description": "tyu",
+      "frequency": "gvhj",
+      "targetGoal": "ghjk",
+      "startDate": "2024-05-10"
+    },
+    {
+      "id": "ffa2",
+      "habitName": "s",
+      "description": "asdfgh",
+      "frequency": "asdfgh",
+      "targetGoal": "zxcvbn",
+      "startDate": "2024-05-13"
     }
   ]
 }

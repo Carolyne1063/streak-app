@@ -11,6 +11,7 @@ function addHabit() {
     let frequency = frequencyInput.value.trim();
     let targetGoal = targetGoalInput.value.trim();
     let startDate = startDateInput.value.trim();
+    console.log('Start Date:', startDate);
     if (habitName === '') {
         alert('Please enter a habit');
         return;
@@ -54,11 +55,18 @@ function addHabitToList(habit) {
     const frequencyText = createParagraphWithText(`Frequency: ${habit.frequency}`);
     const targetGoalText = createParagraphWithText(`Target Goal: ${habit.targetGoal}`);
     const startDateText = createParagraphWithText(`Start Date: ${habit.startDate}`);
+    // Calculate days since start date
+    const currentDate = new Date();
+    const startDate = new Date(habit.startDate);
+    const timeDiff = currentDate.getTime() - startDate.getTime();
+    const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+    const streak = createParagraphWithText(`Streak: ${dayDiff}`);
     appendParagraphToElement(habitText, habitCard);
     appendParagraphToElement(descriptionText, habitCard);
     appendParagraphToElement(frequencyText, habitCard);
     appendParagraphToElement(targetGoalText, habitCard);
     appendParagraphToElement(startDateText, habitCard);
+    appendParagraphToElement(streak, habitCard);
     habitList.appendChild(habitCard);
 }
 function saveHabitToLocalStorage(habit) {
