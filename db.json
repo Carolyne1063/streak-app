@@ -35,47 +35,7 @@
       "targetGoal": "8 hours",
       "startDate": "2024-05-01",
       "endDate": null
-    },
-    {
-      "id": "5",
-      "name": "Pray",
-      "description": "Pray for 30 minutes",
-      "frequency": "daily",
-      "targetGoal": "30 minutes",
-      "startDate": "2024-05-01",
-      "endDate": null
-    },
-    {
-      "id": "1410",
-      "habitName": "ca",
-      "description": "ro",
-      "frequency": "l",
-      "targetGoal": "carol",
-      "startDate": "2024-05-31"
-    },
-    {
-      "id": "cbdd",
-      "habitName": "DRINK WATER",
-      "description": "Drink 8 glasses of water every day",
-      "frequency": "Daily",
-      "targetGoal": "8 Glasses",
-      "startDate": "2024-05-23"
-    },
-    {
-      "id": "4c1d",
-      "habitName": "gh",
-      "description": "tyu",
-      "frequency": "gvhj",
-      "targetGoal": "ghjk",
-      "startDate": "2024-05-10"
-    },
-    {
-      "id": "ffa2",
-      "habitName": "s",
-      "description": "asdfgh",
-      "frequency": "asdfgh",
-      "targetGoal": "zxcvbn",
-      "startDate": "2024-05-13"
     }
+    
   ]
 }

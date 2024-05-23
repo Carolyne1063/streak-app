@@ -23,8 +23,7 @@ function addHabit() {
         targetGoal,
         startDate
     };
-    addHabitToList(habit);
-    saveHabitToLocalStorage(habit);
+    // Save habit to API and update the list dynamically
     saveHabitToAPI(habit);
     // Clear input fields after adding habit
     habitInput.value = '';
@@ -40,9 +39,6 @@ function addHabitToList(habit) {
     const habitIcon = document.createElement('ion-icon');
     habitIcon.setAttribute('name', 'water-outline');
     function createParagraphWithText(text) {
-        if (typeof text !== 'string') {
-            throw new Error('Text must be a string');
-        }
         const paragraph = document.createElement('p');
         paragraph.textContent = text;
         return paragraph;
@@ -60,7 +56,7 @@ function addHabitToList(habit) {
     const startDate = new Date(habit.startDate);
     const timeDiff = currentDate.getTime() - startDate.getTime();
     const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
-    const streak = createParagraphWithText(`Streak: ${dayDiff}`);
+    const streak = createParagraphWithText(`Streak: ${dayDiff} days`);
     appendParagraphToElement(habitText, habitCard);
     appendParagraphToElement(descriptionText, habitCard);
     appendParagraphToElement(frequencyText, habitCard);
@@ -68,15 +64,6 @@ function addHabitToList(habit) {
     appendParagraphToElement(startDateText, habitCard);
     appendParagraphToElement(streak, habitCard);
     habitList.appendChild(habitCard);
-}
-function saveHabitToLocalStorage(habit) {
-    let habits = JSON.parse(localStorage.getItem('habits') || '[]');
-    habits.push(habit);
-    localStorage.setItem('habits', JSON.stringify(habits));
-}
-function loadHabitsFromLocalStorage() {
-    let habits = JSON.parse(localStorage.getItem('habits') || '[]');
-    habits.forEach(addHabitToList);
 }
 function saveHabitToAPI(habit) {
     fetch(API_URL, {
@@ -94,6 +81,23 @@ function saveHabitToAPI(habit) {
     })
         .then(data => {
         console.log('Habit saved to API:', data);
+        // Add the habit to the list dynamically after saving to the API
+        addHabitToList(habit);
+    })
+        .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+function loadHabitsFromAPI() {
+    fetch(API_URL)
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+        .then((habits) => {
+        habits.forEach(addHabitToList);
     })
         .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -107,5 +111,5 @@ function toggleFormDisplay() {
 // Add an event listener to the "Add Habit" button to toggle form display
 let addButton = document.querySelector('button');
 addButton.addEventListener('click', toggleFormDisplay);
-// Load habits from localStorage when the page loads
-window.addEventListener('load', loadHabitsFromLocalStorage);
+// Load habits from the API when the page loads
+window.addEventListener('load', loadHabitsFromAPI);

@@ -5,6 +5,7 @@
 
  body{
     background-color: #fff;
+    overflow-x: hidden;
  }
 
  h1{
@@ -36,8 +37,9 @@
 }
 .top-contents{
     display: flex;
-    flex-direction: row;
     padding-top: 30px;
+   
+
 }
 
 .top-img img{
@@ -79,22 +81,25 @@ button:hover {
 .habit-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
-    margin-left: 100px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .habit-card {
-    width: 400px;
-    height: 250px;
+    width: 250px;
+    height: 150px;
     background-color: white;
     color: black;
     border-radius: 5px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.habit-card:hover{
+    background-color:darkorange;
+    color: white;
 }
 
 .habit-card ion-icon {
@@ -104,4 +109,26 @@ button:hover {
 .habit-card p {
     margin-top: 10px;
     font-size: 10px;
+}
+@media screen and (max-width: 678px){
+    .top-img img{
+        width: 95%;
+        margin-left: 15px;
+    }
+    .top-contents{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+   
+    .container{
+        width: 80%;
+        align-items: center;
+    }
+    .habit-card {
+       width: 70%;
+    }
+    
+
+
 }
