@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streak App</title>
+</head>
+<style>
+    @import url(style.css);
+</style>
+<body>
+    <div class="top-contents">
+        <div class="top-text">
+            <h1> Your Habit Tracker</h1>
+            <p>Click the button below to add a habit</p>
+            <button onclick="addHabit()">+</button>
+        </div>
+        <div class="top-img">
+            <img src="https://assets-global.website-files.com/60680af2581825430b794b8a/606829133013aafbb404c859_Streaks%20Habit%20Tracking%20App.png">
+        </div>
+    </div>
+    <p style="display: flex; justify-content: center; padding-top: 30px; font-size: 20px; font: bold;">Activities</p>
+    <div class="container">
+        <div style="display: none;" class="streak-form">
+            <input type="text" id="habitInput" placeholder="Enter habit">
+            <br>
+            <label for="">Description</label>
+            <br>
+            <input type="text" name="" id="description">
+            <br>
+            <label for="">Frequency</label>
+            <br>
+            <input type="text" name="" id="frequency">
+            <br>
+            <label for="">Target Goal</label>
+            <br>
+            <input type="text" name="" id="targetGoal">
+            <br>
+            <label for="">Start Date</label>
+            <br>
+            <input type="date" name="" id="startDate">
+        </div>
+        
+        <div class="habit-list">
+            <div class="habit-card">
+                <ion-icon name="bicycle-outline"></ion-icon>
+            </div>
+            <div class="habit-card">
+                <ion-icon name="bed-outline"></ion-icon> 
+            </div>
+            <div class="habit-card">
+                <ion-icon name="book-outline"></ion-icon>  
+            </div>
+            <div class="habit-card">
+                <ion-icon name="water-outline"></ion-icon>  
+            </div>
+            <div class="habit-card">
+                <ion-icon name="water-outline"></ion-icon>  
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
