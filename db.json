@@ -35,7 +35,14 @@
       "targetGoal": "8 hours",
       "startDate": "2024-05-01",
       "endDate": null
+    },
+    {
+      "id": "d88c",
+      "habitName": "mavo the goat",
+      "description": "the goat",
+      "frequency": "always the goat",
+      "targetGoal": "to be a greater goat",
+      "startDate": "2024-05-13"
     }
-    
   ]
 }
