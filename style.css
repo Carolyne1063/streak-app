@@ -107,9 +107,13 @@ button:hover {
     margin-top: 10px;
     font-size: 10px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 678px){
+    body{
+        overflow-x: hidden;
+    }
     
     .top-text{
+    width: 60%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -130,7 +134,16 @@ button:hover {
     .habit-card {
        width: 70%;
     }
-    
 
-
+}   
+@media screen and (max-width:1000px){
+    body{
+        overflow-x: hidden;
+        width: 80%;
+    }
+    .top-text{
+        width: 85%;
+    }
 }
+
+

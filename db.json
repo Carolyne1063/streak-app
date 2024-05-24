@@ -43,6 +43,14 @@
       "frequency": "always the goat",
       "targetGoal": "to be a greater goat",
       "startDate": "2024-05-13"
+    },
+    {
+      "id": "e6dd",
+      "habitName": "praying",
+      "description": "praying consistently",
+      "frequency": "daily",
+      "targetGoal": "pray for 20 minutes each day",
+      "startDate": "2024-05-10"
     }
   ]
 }
